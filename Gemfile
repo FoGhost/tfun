@@ -4,12 +4,11 @@ gem 'rails', '3.2.1'
 gem 'devise'
 gem 'cancan'
 
-# Backend
+# database
 gem "mongoid", "~> 2.4"
 gem "bson_ext", "~> 1.5"
 
-# Frontend
-
+# view
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -21,8 +20,14 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'haml-rails'
 gem 'simple_form'
 gem 'bootstrap-rails', :require => 'bootstrap-rails', :git => 'git://github.com/xdite/bootstrap-rails.git'
+
+# pagination
+gem 'will_paginate', '3.0.2'
+gem 'will_paginate_mongoid', '~> 1.0.2'
+gem 'bootstrap-will_paginate', '0.0.3'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -48,9 +53,6 @@ group :development, :test do
   gem 'cucumber'
   gem 'database_cleaner'
   gem 'launchy'
-end
-
-group :development do
   gem 'linecache19', '0.5.13', :path => "#{ENV['GEM_HOME']}/gems/linecache19-0.5.13/"
   gem 'ruby-debug-base19', '0.11.26', :path => "#{ENV['GEM_HOME']}/gems/ruby-debug-base19-0.11.26/"
   gem 'ruby-debug19', :require => 'ruby-debug'

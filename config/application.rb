@@ -62,6 +62,7 @@ module Tfun
 
     config.generators do |g|
       g.test_framework :rspec
+      g.template_engine :haml
     end
 
     config.action_mailer.default_url_options = { :host => 'localhost:3000' }

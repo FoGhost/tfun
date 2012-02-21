@@ -49,6 +49,8 @@ GEM
     addressable (2.2.7)
     arel (3.0.0)
     bcrypt-ruby (3.0.1)
+    bootstrap-will_paginate (0.0.3)
+      will_paginate
     bson (1.5.2)
     bson_ext (1.5.2)
       bson (= 1.5.2)
@@ -97,6 +99,12 @@ GEM
     ffi (1.0.11)
     gherkin (2.8.0)
       json (>= 1.4.6)
+    haml (3.1.4)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.1)
@@ -195,6 +203,11 @@ GEM
       multi_json (>= 1.0.2)
     warden (1.1.1)
       rack (>= 1.0)
+    will_paginate (3.0.2)
+    will_paginate_mongoid (1.0.3)
+      bson_ext (~> 1.5)
+      mongoid (~> 2.4)
+      will_paginate (~> 3.0.2)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -203,6 +216,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-rails!
+  bootstrap-will_paginate (= 0.0.3)
   bson_ext (~> 1.5)
   cancan
   capybara
@@ -213,6 +227,7 @@ DEPENDENCIES
   devise
   fabrication
   faker
+  haml-rails
   jquery-rails
   launchy
   linecache19 (= 0.5.13)!
@@ -226,3 +241,5 @@ DEPENDENCIES
   simple_form
   spork
   uglifier (>= 1.0.3)
+  will_paginate (= 3.0.2)
+  will_paginate_mongoid (~> 1.0.2)
