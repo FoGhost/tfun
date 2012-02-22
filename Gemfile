@@ -22,7 +22,8 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'simple_form'
-gem 'bootstrap-rails', :require => 'bootstrap-rails', :git => 'git://github.com/xdite/bootstrap-rails.git'
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                                  :git => 'git://github.com/anjlab/bootstrap-rails.git'
 
 # pagination
 gem 'will_paginate', '3.0.2'
