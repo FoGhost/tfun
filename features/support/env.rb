@@ -57,3 +57,10 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+
+
+Capybara.run_server = true #Whether start server when testing
+Capybara.default_selector = :xpath #default selector , you can change to :css
+Capybara.default_wait_time = 2 #When we testing AJAX, we can set a default wait time
+Capybara.ignore_hidden_elements = false #Ignore hidden elements when testing, make helpful
+
