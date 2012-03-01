@@ -4,18 +4,39 @@
     %meta{:charset => 'utf-8'}
     %title
       = yield(:page_title)
-    = javascript_include_tag("application")
     = stylesheet_link_tag("application", :media => "all")
     = csrf_meta_tags
     = yield(:head)
 
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %ul.nav
-            %li.active
-              %a{:href => "#"} Home
-            
-    .container
+    %aside
+      .navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            %ul.nav
+              %li.active
+                %a{:href => "/"} Home
+              - if user_signed_in?
+                %li
+                  = link_to("New post", :controller => :posts, :action => :new)
+            - if user_signed_in?
+              %ul.nav.pull-right
+                %li.dropdown
+                  %a.dropdown-toggle{:href => "#", "data-toggle" => "dropdown"}
+                    = current_user.name
+                    %b{:class => "caret"}
+                  %ul.dropdown-menu
+                    = link_to("My Page", user_path(current_user.id))
+                    = link_to("Sign out", destroy_user_session_path, :method => :delete)
+            - else
+              %ul.nav.pull-right
+                %li
+                  = link_to("Register", new_user_registration_path)
+                %li
+                  = link_to("Sign in", new_user_session_path)
+
+    .container{:style => 'margin-top:80px;'}
       = yield
+
+    = javascript_include_tag("application")
+    = yield(:javascripts)

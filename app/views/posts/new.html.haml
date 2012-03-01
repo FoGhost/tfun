@@ -1,0 +1,9 @@
+%article
+  %section
+    .mc{:style => "width: 400px"}
+      = simple_form_for @post do |f|
+        %fieldset
+          %legend New Post
+          = f.input :content, :as => :text, :input_html => { :class => "" }, :placeholder => "Input content here"
+          .actions
+            = f.submit "submit", :class => "btn primary"

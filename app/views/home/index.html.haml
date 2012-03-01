@@ -1,2 +1,10 @@
-%div
-  %p 让我们共享欢乐，情人节纪念！
+%article
+  %section
+    #posts_container
+      - @posts.each do |p|
+        .box.thumbnail.mb4.well
+          .post_main.mb2
+            = p.content
+          .post_actions
+            %a{:class => "btn"} Laugh
+            %a{:class => "btn"} Repost

@@ -6,6 +6,7 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   ## Database authenticatable
+  field :name,               :type => String, :null => false, :default => ""
   field :email,              :type => String, :null => false, :default => ""
   field :encrypted_password, :type => String, :null => false, :default => ""
 
@@ -39,6 +40,9 @@ class User
 
   ## Token authenticatable
   # field :authentication_token, :type => String
+  field :name, :type => String, :null => false, :default => ""
 
-  field :name, :type => String
+  def posts
+    Post.where(:user_id => id)
+  end
 end
