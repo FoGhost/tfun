@@ -1,10 +1,5 @@
 %article
   %section
-    #posts_container
-      - @posts.each do |p|
-        .box.thumbnail.mb4.well
-          .post_main.mb2
-            = p.content
-          .post_actions
-            %a{:class => "btn"} Laugh
-            %a{:class => "btn"} Repost
+    #postsContainer
+      = render :partial => '/posts/post_box', :collection => @posts, :as => :post
+

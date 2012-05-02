@@ -1,0 +1,11 @@
+.waterfallBox.thumbnail.mb15.pd10.well
+  .postMain.mb2
+    = post.content
+  %hr.alt1
+  .postActions
+    %a{:class => "btn"}
+      = t(:haha)
+    %a{:class => "btn"}
+      = t(:repost)
+    = link_to "#{ t(:edit) }", {:controller => :posts, :action => :edit, :id => post.id}, {:class => "btn"}
+    = link_to "#{ t(:delete) }", {:controller => :posts, :action => :destroy, :id => post.id}, {:method => :delete, :class => "btn"}

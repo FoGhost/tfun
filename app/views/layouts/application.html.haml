@@ -35,7 +35,7 @@
                 %li
                   = link_to("Sign in", new_user_session_path)
 
-    .container{:style => 'margin-top:80px;'}
+    #appContainer.container
       = yield
 
     = javascript_include_tag("application")

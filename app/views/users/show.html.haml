@@ -1,2 +1,7 @@
-%p
-  = @user.name
+.row
+  .span3
+    = @user.name
+    %hr
+  .span9
+    #postsContainer
+      = render :partial => '/posts/post_box', :collection => @posts, :as => :post
