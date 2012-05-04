@@ -1,14 +1,24 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
+# utility
 gem 'devise'
 gem 'cancan'
+gem 'carrierwave' # Image uploader
+gem 'mini_magick'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 # database
 gem "mongoid", "~> 2.4"
 gem "bson_ext", "~> 1.5"
 
 # view
+gem 'jquery-rails'
+gem 'haml-rails'
+gem 'simple_form'
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                                  :git => 'git://github.com/anjlab/bootstrap-rails.git'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -18,12 +28,6 @@ group :assets do
   # gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
-gem 'haml-rails'
-gem 'simple_form'
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                                  :git => 'git://github.com/anjlab/bootstrap-rails.git'
 
 # pagination
 gem 'will_paginate', '3.0.2'
