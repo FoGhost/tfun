@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @legend = t(:new_post)
     @post = Post.new
   end
 
@@ -15,6 +16,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @legend = t(:edit_post)
     @post = Post.find(params[:id])
   end
 
