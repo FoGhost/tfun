@@ -18,7 +18,9 @@
                 %a{:href => "/"} Home
               - if user_signed_in?
                 %li
-                  = link_to("New post", :controller => :posts, :action => :new)
+                  = link_to("New Text Post", new_text_post_path)
+                %li
+                  = link_to("New Image Post", new_image_post_path)
             - if user_signed_in?
               %ul.nav.pull-right
                 %li.dropdown

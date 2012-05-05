@@ -1,11 +1,11 @@
 %article
   %section
     #registerForm.mc
-      = simple_form_for @post do |f|
+      = simple_form_for @image_post do |f|
         %fieldset
           %legend
             = @legend
-          = f.input :content, :as => :text, :input_html => { :class => "" }, :placeholder => "Input content here"
           = f.input :image, :as => :file, :input_html => { }
+          = f.input :description, :as => :text, :input_html => { :class => "" }, :placeholder => "Input description here"
           .actions
             = f.submit "submit", :class => "btn primary"

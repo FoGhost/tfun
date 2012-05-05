@@ -1,8 +1,14 @@
-.waterfallBox.thumbnail.mb15.pd10.well
-  .postMain.mb2
-    = post.content
+.waterfall-box.thumbnail.mb15.pd10.well
+  .post-main.mb2
+    - case post.class
+    - when TextPost
+      = post.content
+    - when ImagePost
+      = image_tag post.image_url, :class => "center" if post.image?
+      %p= post.description
+    - else
   %hr.alt1
-  .postActions
+  .post-actions
     %a{:class => "btn"}
       = t(:haha)
     %a{:class => "btn"}

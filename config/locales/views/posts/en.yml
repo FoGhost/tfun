@@ -1,3 +1,7 @@
 en:
   new_post: "New Post"
   edit_post: "Edit Post"
+  new_text_post: "New Text Post"
+  edit_text_post: "Edit Text Post"
+  new_image_post: "New Image Post"
+  edit_image_post: "Edit Image Post"

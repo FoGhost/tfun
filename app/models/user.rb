@@ -45,4 +45,8 @@ class User
   def posts
     Post.where(:user_id => id)
   end
+
+  def text_posts
+    TextPost.where(:user_id => id)
+  end
 end

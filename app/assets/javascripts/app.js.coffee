@@ -1,4 +1,4 @@
 $(document).ready ->
  $('#postsContainer').masonry
-  itemSelector: '.waterfallBox'
+  itemSelector: '.waterfall-box'
   columnWidth: 300
