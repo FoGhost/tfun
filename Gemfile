@@ -58,7 +58,7 @@ group :development, :test do
   gem 'cucumber'
   gem 'database_cleaner'
   gem 'launchy'
-  gem 'linecache19', '0.5.13', :path => "#{ENV['GEM_HOME']}/gems/linecache19-0.5.13/"
-  gem 'ruby-debug-base19', '0.11.26', :path => "#{ENV['GEM_HOME']}/gems/ruby-debug-base19-0.11.26/"
+  #gem 'linecache19', '0.5.13', :path => "#{ENV['GEM_HOME']}/gems/linecache19-0.5.13/"
+  #gem 'ruby-debug-base19', '0.11.26', :path => "#{ENV['GEM_HOME']}/gems/ruby-debug-base19-0.11.26/"
   gem 'ruby-debug19', :require => 'ruby-debug'
 end
