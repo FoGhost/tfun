@@ -4,6 +4,7 @@ class Post
 
   attr_accessor :user
   field :user_id
+  field :content
 
   def user
     @user ||= User.find(:id => user_id)

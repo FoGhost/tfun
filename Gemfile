@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
+
 # utility
 gem 'devise'
 gem 'cancan'
@@ -47,18 +48,20 @@ gem 'bootstrap-will_paginate', '0.0.3'
 # gem 'capistrano'
 
 group :development, :test do
+  gem 'launchy'
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+group :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'spork'
   gem 'fabrication'
   gem 'faker'
-
-  gem 'capybara'
   gem 'cucumber-rails'
   gem 'cucumber'
   gem 'database_cleaner'
-  gem 'launchy'
-  #gem 'linecache19', '0.5.13', :path => "#{ENV['GEM_HOME']}/gems/linecache19-0.5.13/"
-  #gem 'ruby-debug-base19', '0.11.26', :path => "#{ENV['GEM_HOME']}/gems/ruby-debug-base19-0.11.26/"
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'capybara'
 end
