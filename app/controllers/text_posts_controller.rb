@@ -14,7 +14,6 @@ class TextPostsController < ApplicationController
     @text_post.user_id = current_user.id
     #redirect_to error page  unless @post.save
     @text_post.save
-    pp 1, @text_post.inspect
   end
 
   def edit
