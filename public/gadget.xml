@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="sample application"></ModulePrefs>
+  <Content view="mobile" type="url" href="http://guarded-journey-7818.herokuapp.com" />
+  <Content view="touch" type="url" href="http://guarded-journey-7818.herokuapp.com" />
+</Module>
