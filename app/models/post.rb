@@ -6,6 +6,6 @@ class Post
   field :user_id
 
   def user
-    @user ||= User.find(:id => user_id)
+    @user ||= User.find(user_id)
   end
 end

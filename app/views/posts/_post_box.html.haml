@@ -13,5 +13,6 @@
       = t(:haha)
     %a{:class => "btn"}
       = t(:repost)
-    = link_to "#{ t(:edit) }", {:controller => :posts, :action => :edit, :id => post.id}, {:class => "btn"}
-    = link_to "#{ t(:delete) }", {:controller => :posts, :action => :destroy, :id => post.id}, {:method => :delete, :class => "btn"}
+    - if user_signed_in? && current_user == post.user
+      = link_to "#{ t(:edit) }", {:controller => :posts, :action => :edit, :id => post.id}, {:class => "btn"}
+      = link_to "#{ t(:delete) }", {:controller => :posts, :action => :destroy, :id => post.id}, {:method => :delete, :class => "btn"}
