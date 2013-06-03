@@ -6,6 +6,7 @@ gem 'rails', '3.2.1'
 gem 'devise'
 gem 'cancan'
 gem 'carrierwave' # Image uploader
+gem 'streamio-ffmpeg'
 gem 'mini_magick'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
